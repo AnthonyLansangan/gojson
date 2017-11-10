@@ -10,9 +10,7 @@ import (
 	"os"
 )
 
-/*
-FileToStruct converts json file to struct
-*/
+//FileToStruct converts json file to struct
 func FileToStruct(filePath string, structure interface{}) error {
 	file, err := os.Open(filePath)
 	if err != nil {
@@ -24,9 +22,7 @@ func FileToStruct(filePath string, structure interface{}) error {
 	return err
 }
 
-/*
-FileToStruct converts json string to struct
-*/
+//StringToStruct converts json string to struct
 func StringToStruct(jsonString string, structure interface{}) error {
 	err := json.Unmarshal([]byte(jsonString), &structure)
 	return err
